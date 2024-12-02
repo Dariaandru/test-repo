@@ -32,6 +32,27 @@ bool test_candle_body_contains3()
   return candle.body_contains(3.0);
 }
 
+//тесты для метода contains
+// среднее значение
+bool test_candle_contains1()
+{
+  Candle candle{ 0.0, 3.0, 1.0, 3.0 };
+  return candle.contains(2.0);
+}
+// минимальное значение
+bool test_candle_contains2()
+{
+  Candle candle{ 0.0, 3.0, 1.0, 3.0 };
+  return candle.contains(1.0);
+}
+
+// максимальное значение
+bool test_candle_contains3()
+{
+  Candle candle{ 0.0, 3.0, 1.0, 3.0 };
+  return candle.contains(3.0);
+}
+
 
 
 void initTests()
@@ -39,6 +60,9 @@ void initTests()
   tests.push_back(test_candle_body_contains1);
   tests.push_back(test_candle_body_contains2);
   tests.push_back(test_candle_body_contains3);
+  tests.push_back(test_candle_contains1);
+  tests.push_back(test_candle_contains2);
+  tests.push_back(test_candle_contains3);
 }
 
 int launchTests()

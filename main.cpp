@@ -53,6 +53,27 @@ bool test_candle_contains3()
   return candle.contains(3.0);
 }
 
+// тесты для метода full_size
+// положительное значение
+bool test_candle_full_size1()
+{
+  Candle candle{ 0.0, 3.0, 1.0, 3.0 };
+  return candle.full_size() == 2.0;
+}
+
+// отрицательное значение
+bool test_candle_full_size2()
+{
+  Candle candle{ 0.0, 1.0, 3.0, 3.0 };
+  return candle.full_size() == 2.0;
+}
+
+// нулевое значение
+bool test_candle_full_size3()
+{
+  Candle candle{ 1.0, 3.0, 3.0, 0.3 };
+  return candle.full_size() == 0.0;
+}
 
 
 void initTests()
@@ -63,6 +84,9 @@ void initTests()
   tests.push_back(test_candle_contains1);
   tests.push_back(test_candle_contains2);
   tests.push_back(test_candle_contains3);
+  tests.push_back(test_candle_full_size1);
+  tests.push_back(test_candle_full_size2);
+  tests.push_back(test_candle_full_size3);
 }
 
 int launchTests()

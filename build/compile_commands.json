@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/usr/Desktop/test-repo/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\testproj.dir\\main.cpp.obj -c C:\\Users\\usr\\Desktop\\test-repo\\main.cpp",
+  "file": "C:/Users/usr/Desktop/test-repo/main.cpp",
+  "output": "CMakeFiles/testproj.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/usr/Desktop/test-repo/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\testproj.dir\\candle.cpp.obj -c C:\\Users\\usr\\Desktop\\test-repo\\candle.cpp",
+  "file": "C:/Users/usr/Desktop/test-repo/candle.cpp",
+  "output": "CMakeFiles/testproj.dir/candle.cpp.obj"
+}
+]

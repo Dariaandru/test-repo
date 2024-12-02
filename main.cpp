@@ -97,6 +97,50 @@ bool test_candle_body_size3()
   return candle.body_size() == 0.0;
 }
 
+// тесты для метода is_green
+// положительное значение
+bool test_candle_is_green1()
+{
+  Candle candle{ 1.0, 3.0, 1.0, 3.0 };
+  return candle.is_green();
+}
+
+// отрицательное значение
+bool test_candle_is_green2()
+{
+  Candle candle{ 3.0, 3.0, 1.0, 1.0 };
+  return !(candle.is_green());
+}
+
+// нулевое значение
+bool test_candle_is_green3()
+{
+  Candle candle{ 1.0, 3.0, 3.0, 1.0 };
+  return !(candle.is_green());
+}
+
+// тесты для метода is_red
+// положительное значение
+bool test_candle_is_red1()
+{
+  Candle candle{ 3.0, 3.0, 1.0, 1.0 };
+  return candle.is_red();
+}
+
+// отрицательное значение
+bool test_candle_is_red2()
+{
+  Candle candle{ 1.0, 3.0, 1.0, 3.0 };
+  return !(candle.is_red());
+}
+
+// нулевое значение
+bool test_candle_is_red3()
+{
+  Candle candle{ 1.0, 3.0, 3.0, 1.0 };
+  return !(candle.is_red());
+}
+
 
 void initTests()
 {
@@ -112,6 +156,12 @@ void initTests()
   tests.push_back(test_candle_body_size1);
   tests.push_back(test_candle_body_size2);
   tests.push_back(test_candle_body_size3);
+  tests.push_back(test_candle_is_green1);
+  tests.push_back(test_candle_is_green2);
+  tests.push_back(test_candle_is_green3);
+  tests.push_back(test_candle_is_red1);
+  tests.push_back(test_candle_is_red2);
+  tests.push_back(test_candle_is_red3);
 }
 
 int launchTests()

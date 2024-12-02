@@ -75,6 +75,28 @@ bool test_candle_full_size3()
   return candle.full_size() == 0.0;
 }
 
+// тесты для метода body_size
+// положительное значение
+bool test_candle_body_size1()
+{
+  Candle candle{ 1.0, 3.0, 1.0, 3.0 };
+  return candle.body_size() == 2.0;
+}
+
+// отрицательное значение
+bool test_candle_body_size2()
+{
+  Candle candle{ 3.0, 3.0, 1.0, 1.0 };
+  return candle.body_size() == 2.0;
+}
+
+// нулевое значение
+bool test_candle_body_size3()
+{
+  Candle candle{ 1.0, 3.0, 3.0, 1.0 };
+  return candle.body_size() == 0.0;
+}
+
 
 void initTests()
 {
@@ -87,6 +109,9 @@ void initTests()
   tests.push_back(test_candle_full_size1);
   tests.push_back(test_candle_full_size2);
   tests.push_back(test_candle_full_size3);
+  tests.push_back(test_candle_body_size1);
+  tests.push_back(test_candle_body_size2);
+  tests.push_back(test_candle_body_size3);
 }
 
 int launchTests()
